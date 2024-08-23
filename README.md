@@ -88,7 +88,7 @@ Include the following CSS:
 }
 
 [initialized].one-text {
-	/* do not touch the CSS here */
+    /* do not touch the CSS here */
     position:absolute;
     top:0;left:0;
     margin-top:0;
@@ -106,11 +106,11 @@ Include the following CSS:
 
 /*------- TEXT CHARACTERS -------*/
 [text-bobber-chara]{
-	opacity:0;
+    opacity:0;
 }
 
 [text-bobber-chara].bob-it {
-	opacity:1;
+    opacity:1;
     transition:opacity var(--Text-Bobber-Animation-Speed) ease-in-out;
 }
 
