@@ -29,7 +29,7 @@
 
 Include the following after `<head>`:
 ```html
-<script src="https://text-bobber.gitlab.io/t/init.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ht-devx/textBobber/init.min.js"></script>
 
 <script>
 textBobber({
