@@ -10,7 +10,7 @@
           \/_/\/_/     \/_/        \/_/   \/_/\/_/   \/_/ 
           
         INITIAL REL.: 2024-08-23
-        LAST UPDT.: 2024-08-23
+        LAST UPDT.: 2025-09-10
 
 ------------------------------------------------------------------->
 
@@ -34,11 +34,7 @@
 <script src="https://popify.gitlab.io/i/popup.js" crossorigin></script>
 
 <!-- essential textBobber files -->
-<script src="./init.min.js"></script>
-
-<!-- recommended textBobber files -->
-<link href="https://text-bobber.gitlab.io/t/rec/style.css" rel="stylesheet" crossorigin>
-<link href="https://text-bobber.gitlab.io/t/rec/optional-style.css" rel="stylesheet" crossorigin>
+<script src="./v2/init.min.js"></script>
 
 <!-- demo use only -->
 <link href="https://text-bobber.gitlab.io/t/demo/vars.css" rel="stylesheet" crossorigin>
@@ -50,7 +46,8 @@ textBobber({
     wrapper: ".speech-container",
 
     initialDelay: "0.4s",
-    
+
+    textContainer: ".all-texts",
     textSelectors: ".one-text",
     textSelectorsFadeSpeed: "0.3s",
 
@@ -58,9 +55,35 @@ textBobber({
     characterAnimationSpeed: "0.15s",
 
     nextButton: ".next-arrow",
-    nextButtonAnimationSpeed: "0.3s"
+    nextButtonAnimationSpeed: "0.3s",
+
+    loop: false
 })
 </script>
+
+<style>
+.speech-container {
+	display:none;
+}
+
+.speech-container.ready {
+	display:block;
+}
+
+[text-bobber-chara]:not([text-bobber-whitespace]){
+    display:inline-block;
+    transform:translateY(-2px);
+}
+
+[text-bobber-chara]:not([text-bobber-whitespace]).bob-it {
+    transform:none;
+    transition:all var(--Text-Bobber-Animation-Speed) ease-in-out;
+}
+
+[text-bobber-chara].show {
+    transform:none;
+}
+</style>
 
 </head>
 <body>
