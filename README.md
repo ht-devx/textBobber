@@ -3,10 +3,10 @@
 > A plugin that mimics the typewriter effect in visual novels for a specified text box (or multiple text boxes) with custom delay and transition values.
 
 **Preview / Demo:** [ht-devx.github.io/textBobber](https://ht-devx.github.io/textBobber)\
-**Demo code:** [jsfiddle.net/ht_dev/3wz0n8gt](https://jsfiddle.net/ht_dev/3wz0n8gt)\
+**Demo code:** [jsfiddle.net/ht_dev/gfvmcuwo](https://jsfiddle.net/ht_dev/gfvmcuwo)\
 **Author:** HT ([@ ht-devx](https://github.com/ht-devx))\
 **Release date:** 2024-08-23\
-**Last updated:** 2025-02-10 4:02PM [GMT-7]
+**Last updated:** 2025-02-12 5:44PM [GMT-7]
 
 **Preview:**  
 ![Screenshot GIF of how the textBobber plugin is used. In the style of a visual novel, the name of "Lorem Ipsum says" stylized in full uppercase sits on the left, with a pen sketch of a woman on the right. Underneath sits a text box. Firstly, the text box shows "One, don't pick up the phone" followed by a paragraph of dummy text, in which each character fades in one after the other. The user clicks on the text box, forcing the rest of the characters to finish their animations, and thusly the entire text is shown, with a next arrow showing in the bottom right of the box. The user then clicks on the text box to go to the next dialogue text. This action repeats until the last dialogue (three in total) are complete.](https://github.com/user-attachments/assets/19dac179-eadb-4cff-bd9a-f4db1e5ab00b)
@@ -29,7 +29,7 @@
 
 Include the following after `<head>`:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/ht-devx/textBobber/v2/init.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ht-devx/textBobber/v3/init.min.js"></script>
 
 <script>
 textBobber({
@@ -47,6 +47,7 @@ textBobber({
     nextButton: ".next-arrow", // change this to your "next dialogue" selector
     nextButtonAnimationSpeed: "0.3s", // fade-in & fade-out speed of the next arrow appearing & disappearing
 
+    height: "compact", // "tall" or "compact"
     loop: false // true or false; when the last box finishes, restart the boxes
 })
 </script>
@@ -102,7 +103,7 @@ Things to note from the above snippet (CSS):
 - Feel free to try out your changes in the playground below:
 
 **Code playground:**  
-[jsfiddle.net/ht_dev/3wz0n8gt/](https://jsfiddle.net/ht_dev/3wz0n8gt/)
+[jsfiddle.net/ht_dev/gfvmcuwo/](https://jsfiddle.net/ht_dev/gfvmcuwo/)
 
 ---
 
